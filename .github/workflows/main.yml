@@ -42,7 +42,8 @@ jobs:
       with:
         name: apiapp
         path: api/bin/published
-   call_release:
+
+  call_release:
     uses: ./.github/workflows/cd.yaml
     needs: build
     with:
