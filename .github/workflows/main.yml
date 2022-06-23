@@ -21,7 +21,7 @@ jobs:
         STEP_LEVEL1: "THIS VLAUE COMES FORM THE STEP LEVEL"
       run: 
         echo "Hello World from step 1"
-        echo "STEP_VALUE_1='THIS IS SET BY STEP'" >> $GITHUB_ENV
+        echo "STEP_LEVEL1='THIS IS SET BY STEP'" >> $GITHUB_ENV
 
     - name: Say Hello World 2
       shell: bash
