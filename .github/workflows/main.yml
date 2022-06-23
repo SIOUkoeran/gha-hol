@@ -20,8 +20,8 @@ jobs:
           first_value="this is the first value"
 
           echo "::set-output name=my_first_value::$first_value"
-          
+
       - name: get output value
         shell: bash
         run:
-          echo ${{ steps.first.outputs.my_frirst_value }}
+          echo ${{ steps.first.outputs.my_first_value }}
