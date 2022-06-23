@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [ 'windows-latest', 'macos-latest', 'ubuntu-latest']
+        nodejs: ['14.x', '16.x']
 
     runs-on: ${{ matrix.os }}
     
@@ -24,3 +25,4 @@ jobs:
           first_value="this is the first value"
 
           echo "OS ${{ matrix.os }}"
+          echo "nodejs ${{ matrix.nodejs }}"
