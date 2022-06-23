@@ -1,12 +1,9 @@
 name: "My first github action"
 
-on: push
-
-env:
-  WORKFLOW_LEVEL: "THIS VALUE COMES FROM THE WORKFLOW LEVEL"
+on: [ 'push', 'pull_request' ]
 
 jobs:
-  first-job: 
+  first-job:
     name: "first job"
 
 
@@ -19,7 +16,6 @@ jobs:
     
     steps:
 
-
       - name : Steup node.js
         uses: actions/setup-node@v3
 
@@ -31,3 +27,18 @@ jobs:
 
           echo "OS ${{ matrix.os }}"
           echo "nodejs ${{ matrix.nodejs }}"
+
+  seconde-job:
+    name: second
+    if: github.event_name == 'pull_request'
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name : if pull
+        
+      - name: if
+        shell: bash
+        run:
+          echo first_value
