@@ -23,4 +23,4 @@ jobs:
         run:
           first_value="this is the first value"
 
-          echo "OS: ${{ matrix.os }}"
+          echo "OS ${{ matrix.os }}"
