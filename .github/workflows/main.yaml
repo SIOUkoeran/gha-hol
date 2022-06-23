@@ -44,7 +44,7 @@ jobs:
         path: api/bin/published
 
   call_release:
-    uses: ./.github/workflows/cd.yml
+    uses: ./.github/workflows/cd.yaml
     needs: build
     with:
       artifact_name: 42sapp
