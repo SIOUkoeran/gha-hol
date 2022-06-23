@@ -40,9 +40,9 @@ jobs:
       shell: bash
       env:
         STEP_LEVEL2: "THIS VLAUE COMES FORM THE STEP LEVEL"
-      run:
+      run: |
         echo "Hello World from step 1"
-        echo $WORKFLOW_LEVEL
+        echo $WORKFLOW_LEVEL 
         echo $JOB_LEVEL1
         echo $JOB_LEVEL2
         echo $STEP_LEVEL1
