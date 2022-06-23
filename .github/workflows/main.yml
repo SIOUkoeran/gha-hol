@@ -18,6 +18,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     
     steps:
+
+
+      - name : Steup node.js
+        uses: actions/setup-node@v3
+
       - name: output value from ${{ matrix.os }}
         id: first
         shell: bash
