@@ -37,8 +37,6 @@ jobs:
     steps:
     
       - name : if pull
-        
-      - name: if
         shell: bash
         run:
           echo first_value
