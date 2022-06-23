@@ -28,15 +28,27 @@ jobs:
           echo "OS ${{ matrix.os }}"
           echo "nodejs ${{ matrix.nodejs }}"
 
-  seconde-job:
+  second-job:
     name: second
-    if: github.event_name == 'pull_request'
+    needs: first-job
 
     runs-on: ubuntu-latest
 
     steps:
     
-      - name : if pull
+      - name : second job first step
         shell: bash
         run:
-          echo first_value
+          echo second job
+  third-job:
+    name: third
+    needs: third-job
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name : third job first step
+        shell: bash
+        run:
+          echo third job
