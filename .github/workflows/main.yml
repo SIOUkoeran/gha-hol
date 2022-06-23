@@ -42,8 +42,8 @@ jobs:
       with:
         name: apiapp
         path: api/bin/published
-  call_release:
-    uses: ./.github/workflows/cd.yml
-    runs-on: ubuntu-latest
+   call_release:
+    uses: ./.github/workflows/cd.yaml
+    needs: build
     with:
       artifact_name: 42sapp
